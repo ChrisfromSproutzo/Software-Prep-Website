@@ -6,27 +6,29 @@
   </head>
   <body>
     <header>
-        <h1 style="padding: 25px;">Testing...</h1>
-        <script src="script.js"></script>
+      <script type="text/javascript" src="/Users/chrisallison/Development/code/Software-Prep-Website/script.js"></script>
+        <h2 style="padding: 25px;">Hey there...</h2>
     </header>
-    <div class="section1">
-        <button class="button" onclick="MarfredAppears()">Who's Man is This?</button>
-    </div>
-    <secretText id='secretText' style='display: none'>
-        <p>
-            Secret text appears
-        </p>
-    </secretText>
-
-    <div id="defaultImage" style="display: block">
-        <p>Marfed</p>
-        <img src="Images/Marfred.png" alt="Marfred1"/>
-    </div>
-
-    <div id="secretImage" style="display: none">
-    <p>Marf.edu</p>
-    <img src="Images/Marfr.edu.png" alt="Marfred2"/>
-    </div>
+    <div class="innerBody">
+    <div class="row">
+        <div class="column">
+            <h1>I'm Chris</h1>
+             <img src="Images/IMG_1224.PNG" alt="Chris" onclick="#dodger.style.left = `${left - 10}px"/>
+             <p>I used to be an animator before getting recruited as a content marketer in the LA tech scene. I spent the last four years as a marketer, then junior exec, of a SaaS startup and recently left to start my own company. I'm learning to code in preparation of building that company, and can't wait to get started.</p>
+           
+        </div>
+        <div class="column">
+            <h2 style="margin-top:70px">Check out this javascript I wrote</h2>
+            <p>But don't tell anyone, it's a secret...</p>
+                <button class='button' onclick="secretTextAppears()">Click me</button>
+            <secretText id='secretText' style='display: none'>
+                <p style="color:purple; font-size: 2em;">
+                    Secret text appears!
+                </p>
+            </secretText>
+            </div>
+        </div>
+      </div>
     <P>.</P>
     <P>.</P>
     <P>.</P>

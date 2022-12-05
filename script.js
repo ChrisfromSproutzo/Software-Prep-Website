@@ -1,42 +1,65 @@
-const h2 = document.createElement("h2")
-h2.textContent="Intro"
-document.querySelector("body").appendChild(h2);
-
-
-
-function textAppears(){
-    var text = document.getElementById("secretText")
-    if (text.style.display ==="none") {
-        text.style.display = "block";
+  function secretTextAppears(){
+    let text = document.getElementById("secretText");
+    if (text.style.display === "none") {
+      text.style.display = "block";
     } else {
-        text.style.display = "none";
-
-}
-}
-
-function MarfredAppears(){
-    var secret = document.getElementById("secretImage")
-    if (secret.style.display ==="none") {
-        secret.style.display = "block";
-    } else {
-        secret.style.display = "none";
-}
-    var notSecret = document.getElementById("defaultImage")
-if (notSecret.style.display ==="none") {
-    notSecret.style.display = "block";
-} else {
-    notSecret.style.display = "none";
-
-}
-}
+      text.style.display = "none";
+    }
+  }
 
 
 
-//function toggleText() {
-//    var text = document.getElementById("demo");
-//    if (text.style.display === "none") {
-//        text.style.display = "block";
-//    } else {
-//        text.style.display = "none";
-//    }
-//    }
+
+
+  const dodger = document.getElementById('dodger')
+  let leftNumbers = dodger.style.left.replace("px", "");
+  let left = parseInt(leftNumbers, 10);
+  
+  function moveDodgerLeft() {
+      dodger.style.left = `${left - 10}px`;
+  }
+
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowLeft") {
+      moveDodgerLeft();
+    }
+  });
+  
+  
+  function moveDodgerRight(){
+    if (left > 0){
+      dodger.style.left = `${left + 10}px`;
+      }
+    }
+  document.addEventListener("keydown", function(e) {
+    if (e.key === "ArrowRight") {
+        moveDodgerRight();
+      }
+    });
+  
+    function moveDodgerUp(){
+      const bottomNumbers = dodger.style.bottom.replace("px", "")
+      const bottom = parseInt(bottomNumbers, 10);
+      if (bottom >= 0){
+        dodger.style.bottom = `${bottom + 10}px`;
+        }
+      }
+    document.addEventListener("keydown", function(e) {
+      if (e.key === "ArrowUp") {
+          moveDodgerUp();
+        }
+      });
+  
+      function moveDodgerDown(){
+        const bottomNumbers = dodger.style.bottom.replace("px", "")
+        const bottom = parseInt(bottomNumbers, 10);
+        if (bottom >= 0){
+          dodger.style.bottom = `${bottom - 10}px`;
+          }
+        }
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "ArrowDown") {
+            moveDodgerDown();
+          }
+        });
